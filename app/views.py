@@ -9,15 +9,11 @@ def index():
     '''
     View root page function that returns the index page and its data
     '''
-    #Getting General sources
-    general_sources = get_sources('general')
-    print(general_sources)
-    title = 'Home-NEWS sources'
-    return render_template('index.html', title=title, general_sources=general_sources)
 
-# @app.route('/source/<source_id>')
-# def source(source_id):
-#     '''
-#     view source page function that returns the source and its data
-#     '''
-#     return render_template('source.html', id = source_id)     
+    #Getting sources
+    all_sources = get_sources()
+    print()
+    title = 'Home-NEWS sources'
+
+    return render_template('index.html', title=title, all_sources=all_sources)
+  
