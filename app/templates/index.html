@@ -10,10 +10,10 @@
     </head>
     <body>
         <h3>SOURCES</h3>
-        <ul>
-            {% for general_source in general%}
-                <li>{{ general_source.name }}</li>
+        <ol>
+            {% for source in all_sources%}
+                <li>{{ source.name }}</li>
             {% endfor %}    
-        </ul>
+        </ol>
     </body>
 </html>
