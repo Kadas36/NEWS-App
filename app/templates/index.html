@@ -1,1 +1,19 @@
-<h1> Hello World </h1>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>NEWS Sources</title>
+        {% endif %}
+    </head>
+    <body>
+        <h3>SOURCES</h3>
+        <ul>
+            {% for general_source in general%}
+                <li>{{ general_source.name }}</li>
+            {% endfor %}    
+        </ul>
+    </body>
+</html>
