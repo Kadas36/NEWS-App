@@ -10,11 +10,6 @@
     </head>
     <body>
         <h3>SOURCES</h3>
-        <ul>
-            {% for article in top_articles%}
-                <li>{{ article.description }}</li>
-            {% endfor %}    
-        </ul>
         <ol>
             {% for source in all_sources%}
                 <li>{{ source.name }}</li>
@@ -22,6 +17,10 @@
         </ol>
 
     
-        
+        <ul>
+            {% for article in top_articles%}
+                <li>{{ article.name['name'] }}</li>
+            {% endfor %}    
+        </ul>
     </body>
 </html>

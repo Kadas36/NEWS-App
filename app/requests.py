@@ -80,8 +80,8 @@ def process_results(top_article_list):
     top_articles_results = []
 
     for top_article_item in top_article_list:
-        id = top_article_item.get('source[name]')
-        name = top_article_item.get('source[name]')
+        id = top_article_item.get("source")
+        name = top_article_item.get("source")
         description = top_article_item.get('description')
         author = top_article_item.get('"author')
         url = top_article_item.get('url')
