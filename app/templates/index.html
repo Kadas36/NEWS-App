@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        {% if title %}
-        <title>{{ title }}</title>
-        {% else %}
-        <title>NEWS Sources</title>
-        {% endif %}
-    </head>
-    <body>
-        <h3>SOURCES</h3>
-        <ol>
-            {% for source in all_sources%}
-                <li>{{ source.name }}</li>
-            {% endfor %}    
-        </ol>
+{% extends 'base.html' %}
 
-    
-        <ul>
-            {% for article in top_articles%}
-                <li>{{ article.name['name'] }}</li>
-            {% endfor %}    
-        </ul>
-    </body>
-</html>
+<!-- Content block -->
+{% block content %}
+
+<h3>SOURCES</h3>
+<ol>
+  {% for source in all_sources%}
+    <li>{{ source.name }}</li>
+  {% endfor %}    
+</ol>
+
+
+<ul>
+  {% for article in top_articles%}
+    <li>{{ article.name['name'] }}</li>
+  {% endfor %}    
+</ul>
+
+
+{% endblock %}
