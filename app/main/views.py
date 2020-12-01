@@ -20,6 +20,7 @@ def index():
     return render_template('index.html', general=general_list, health=health_list, business=business_list, sports=sports_list, technology=technology_list, entertainment=entertainment_list)               
                                                       
 
+
 @main.route('/news/<id>')
 def news (id):
     '''
