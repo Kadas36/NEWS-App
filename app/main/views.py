@@ -26,4 +26,4 @@ def news (id):
     Returns the news article from a highlight
     '''
     news_args = get_articles(id)
-    return render_template("article.html", news=news_args)
+    return render_template("articles.html", news=news_args)
